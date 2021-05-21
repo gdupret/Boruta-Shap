@@ -1,6 +1,6 @@
 from BorutaShap import BorutaShap, load_data
-from xgboost import XGBClassifier,XGBRegressor
-from catboost import CatBoostClassifier,CatBoostRegressor
+from xgboost import XGBClassifier, XGBRegressor
+from catboost import CatBoostClassifier, CatBoostRegressor
 from sklearn.tree import DecisionTreeClassifier, DecisionTreeRegressor
 from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
 from lightgbm import LGBMClassifier, LGBMRegressor
