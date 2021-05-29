@@ -210,7 +210,7 @@ class BorutaShap:
             else:
                 gss = GroupShuffleSplit(n_splits=1, train_size=.7, random_state=self.random_state)
                 gss.get_n_splits()
-                train_idx, test_idx = yield gss.split(self.X_boruta, self.y, self.groups)
+                train_idx, test_idx = gss.split(self.X_boruta, self.y, self.groups).next()
                 self.X_boruta_train = self.X_boruta[train_idx, ]
                 self.X_boruta_test = self.X_boruta[test_idx, ]
                 self.y_train = self.y[train_idx]
@@ -359,11 +359,8 @@ class BorutaShap:
             # early stopping
             if self.X.shape[1] == 0:
                 break
-
             else:
-
                 self.Check_if_chose_train_or_test_and_train_model()
-
                 self.X_feature_import, self.Shadow_feature_import = self.feature_importance(normalize=normalize)
                 self.update_importance_history()
                 hits = self.calculate_hits()

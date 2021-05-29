@@ -140,4 +140,6 @@ cython_debug/
 # IDEs
 .vscode/
 boruta-shap.iml
+.idea/src/catboost_info/
 .idea/
+src/catboost_info/

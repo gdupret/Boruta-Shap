@@ -6,7 +6,6 @@ from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
 from lightgbm import LGBMClassifier, LGBMRegressor
 
 
-
 def Test_Models(data_type, models):
 
     X,y = load_data(data_type=data_type)
